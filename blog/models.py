@@ -25,10 +25,8 @@ class Post(models.Model):
     pub_status = models.IntegerField(choices=PUB_STATUS, default=0)
     status = models.IntegerField(choices=POST_STATUS, default=0)
 
+    class Meta:
+        ordering = ['-created_on']
 
-class Meta:
-    ordering = ['-created_on']
-
-
-def __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
