@@ -3,9 +3,14 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-STATUS = (
+PUB_STATUS = (
     (0, "Draft"),
     (1, "Publish")
+)
+
+POST_STATUS = (
+    (0, "uncompleted"),
+    (1, "completed")
 )
 
 
@@ -17,7 +22,8 @@ class Post(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    pub_status = models.IntegerField(choices=PUB_STATUS, default=0)
+    status = models.IntegerField(choices=POST_STATUS, default=0)
 
 
 class Meta:
