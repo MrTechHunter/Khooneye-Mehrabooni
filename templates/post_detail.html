@@ -7,6 +7,13 @@
                 <h1>{% block title %} {{ post.title }} {% endblock title %}</h1>
                 <p class=" text-muted">پست شده در: {{ post.created_on }}</p>
                 <p class="card-text ">{{ post.content | safe }}</p>
+                <hr />
+                <a href="https://idpay.ir/khooneye-mehrabooni" class="btn btn-primary btn-lg btn-block">حمایت</a>
+                <p style="font-size: 15px;margin-top: 8px;">لطفا پس از انتخاب گزینه حمایت در بخش توضیحات بفرمایید که قصد
+                    حمایت کدام پست
+                    خونه مهربونی رو دارید.<br />
+                    <span style="font-weight: bold;">تایپ عنوان پست کفایت میکند</span>
+                </p>
             </div>
         </div>
         {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
